@@ -24,6 +24,13 @@ _git_clone_or_pull "$install_dir/appstore"
 _git_clone_or_pull "$install_dir/apps" https://github.com/YunoHost/apps.git
 _git_clone_or_pull "$install_dir/apps_tools" https://github.com/YunoHost/apps-tools.git
 
+ynh_config_add --template="update_catalog.sh" --destination="$install_dir/update_catalog.sh"
+chmod +x "$install_dir/update_catalog.sh"
+
+# Fixture until we manage it properly
+ln -s "$install_dir/apps" "$install_dir/appstore/.cache/apps"
+ln -s "$install_dir/apps_cache" "$install_dir/appstore/.apps_cache"
+
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
@@ -39,9 +46,6 @@ pushd "$install_dir/apps_tools" > /dev/null
 popd > /dev/null
 
 ynh_script_progression "Downloading apps and appstore cache..."
-ynh_config_add --template="update_catalog.sh" --destination="$install_dir/update_catalog.sh"
-chmod +x "$install_dir/update_catalog.sh"
-
 "$install_dir/update_catalog.sh"
 
 #=================================================

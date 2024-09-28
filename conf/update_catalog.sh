@@ -58,7 +58,9 @@ update_git_and_venv() {
         popd
 
         if [[ "${git_was_updated}" == 1 ]]; then
-            reload_store
+            if ! reload_store; then
+                sendxmpppy "[appstore] Couldn't reload appstore, is it down?"
+            fi
         fi
     }
     popd > /dev/null

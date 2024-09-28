@@ -17,8 +17,8 @@ _git_clone_or_pull() {
     else
         ynh_exec_as_app git clone "$repo_url" "$repo_dir" --quiet
     fi
-    ynh_exec_as_app git -C "$repo_dir" checkout master --quiet
-    ynh_exec_as_app git -C "$repo_dir" pull origin master --quiet
+    ynh_exec_as_app git -C "$repo_dir" checkout main --quiet
+    ynh_exec_as_app git -C "$repo_dir" pull origin main --quiet
 }
 
 

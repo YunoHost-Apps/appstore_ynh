@@ -41,9 +41,9 @@ chmod +x "$install_dir/update_catalog.sh"
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
 
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-ynh_add_systemd_config
+ynh_config_add_systemd
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
 

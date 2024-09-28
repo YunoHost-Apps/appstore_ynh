@@ -32,6 +32,7 @@ popd > /dev/null
 
 ynh_script_progression "Downloading apps and appstore cache..."
 ynh_config_add --template="update_catalog.sh" --destination="$install_dir/update_catalog.sh"
+chmod +x "$install_dir/update_catalog.sh"
 
 "$install_dir/update_catalog.sh"
 

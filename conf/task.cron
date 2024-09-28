@@ -1,0 +1,2 @@
+# Every 2 hours
+0 */2 * * * root __INSTALL_DIR__/appstore/maintenance.sh

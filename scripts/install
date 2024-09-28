@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_script_progression --message="Setting up source files..."
+
+_git_clone_or_pull "$install_dir/appstore"
+
+chown -R "$app:www-data" "$install_dir"
+
+#=================================================
+# INSTALL APP
+#=================================================
+ynh_script_progression --message="Installing app..." --weight=5
+
+pushd "$install_dir/appstore"
+{
+    ynh_exec_as_app python3 -m venv venv
+    ynh_exec_as_app venv/bin/pip3 install -r requirements.txt >/dev/null
+    update_appstore_cache
+}
+popd
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding system configurations related to $app..."
+
+ynh_add_nginx_config
+
+ynh_add_systemd_config
+
+yunohost service add "$app" --log="/var/log/$app/$app.log"
+
+# Add cron job
+cron_path="/etc/cron.d/$app"
+ynh_config_add --template="task.cron" --destination="$cron_path"
+chown root: "$cron_path"
+chmod 644 "$cron_path"
+
+#=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression --message="Starting $app's systemd service..."
+
+# Start a systemd service
+ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.log"
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+ynh_script_progression --message="Installation of $app completed" --last

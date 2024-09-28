@@ -10,29 +10,33 @@ source /usr/share/yunohost/helpers
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..."
+ynh_script_progression "Setting up source files..."
 
 _git_clone_or_pull "$install_dir/appstore"
+_git_clone_or_pull "$install_dir/apps" https://github.com/YunoHost/apps.git
+_git_clone_or_pull "$install_dir/apps_tools" https://github.com/YunoHost/apps-tools.git
 
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # INSTALL APP
 #=================================================
-ynh_script_progression --message="Installing app..." --weight=5
+ynh_script_progression "Installing app..."
 
-pushd "$install_dir/appstore"
+pushd "$install_dir/apps_tools" > /dev/null
 {
-    ynh_exec_as_app python3 -m venv venv
-    ynh_exec_as_app venv/bin/pip3 install -r requirements.txt >/dev/null
-    update_appstore_cache
+    _update_venv
+    ynh_exec_as_app venv/bin/pip install -r requirements.txt > /dev/null
 }
-popd
+popd > /dev/null
+
+ynh_script_progression "Downloading apps and appstore cache..."
+"$install_dir/update_catalog.sh"
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding system configurations related to $app..."
+ynh_script_progression "Adding system configurations related to $app..."
 
 ynh_add_nginx_config
 
@@ -49,7 +53,7 @@ chmod 644 "$cron_path"
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Starting $app's systemd service..."
+ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
 ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.log"
@@ -57,4 +61,4 @@ ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.l
 #=================================================
 # END OF SCRIPT
 #=================================================
-ynh_script_progression --message="Installation of $app completed" --last
+ynh_script_progression "Installation of $app completed"

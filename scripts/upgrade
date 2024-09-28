@@ -21,6 +21,8 @@ ynh_systemctl --service="$app" --action="stop"
 ynh_script_progression "Upgrading source files..."
 
 _git_clone_or_pull "$install_dir/appstore"
+_git_clone_or_pull "$install_dir/apps" https://github.com/YunoHost/apps.git
+_git_clone_or_pull "$install_dir/apps_tools" https://github.com/YunoHost/apps-tools.git
 
 chown -R "$app:www-data" "$install_dir"
 
@@ -29,13 +31,17 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 ynh_script_progression --message="Upgrading app..." --weight=5
 
-pushd "$install_dir/appstore"
+pushd "$install_dir/apps_tools" > /dev/null
 {
-    ynh_exec_as_app python3 -m venv venv
-    ynh_exec_as_app venv/bin/pip3 install -r requirements.txt >/dev/null
-    update_appstore_cache
+    _update_venv
+    ynh_exec_as_app venv/bin/pip install -r requirements.txt > /dev/null
 }
-popd
+popd > /dev/null
+
+ynh_script_progression "Downloading apps and appstore cache..."
+
+ynh_config_add --template="update_catalog.sh" --destination="$install_dir/update_catalog.sh"
+"$install_dir/update_catalog.sh"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS

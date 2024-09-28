@@ -1,2 +1,5 @@
-# Every 2 hours
-0 */2 * * * root __INSTALL_DIR__/appstore/maintenance.sh
+# Every 4 hours
+0 */4 * * * root __INSTALL_DIR__/update_catalog.sh
+
+# Every day
+0 */4 * * * root __INSTALL_DIR__/update_catalog.sh

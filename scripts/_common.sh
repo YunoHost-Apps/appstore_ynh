@@ -21,21 +21,9 @@ _git_clone_or_pull() {
     ynh_exec_as_app git -C "$repo_dir" pull origin main --quiet
 }
 
-
-update_appstore_cache() {
-    ynh_exec_as_app curl -so .cache/apps.json https://app.yunohost.org/default/v3/apps.json
-
-    _git_clone_or_pull .cache/apps https://github.com/YunoHost/apps.git
-    _git_clone_or_pull .cache/tools https://github.com/YunoHost/apps-tools.git
-
-    if [ ! -d ".cache/tools/venv" ]; then
-        ynh_exec_as_app python3 -m venv .cache/tools/venv
+_update_venv() {
+    if [ ! -d "venv" ]; then
+        ynh_exec_as_app python3 -m venv venv
     fi
-    ynh_exec_as_app .cache/tools/venv/bin/pip install -r requirements.txt >/dev/null
-
-    ynh_exec_as_app .cache/tools/venv/bin/python3 .cache/tools/app_caches.py -l .cache/apps/ -c .apps_cache -d -j20
-
-    venv/bin/python3 fetch_main_dashboard.py 2>&1 | grep -v 'Following Github server redirection'
-
-    venv/bin/python3 fetch_level_history.py
+    ynh_exec_as_app venv/bin/pip install --upgrade pip >/dev/null
 }

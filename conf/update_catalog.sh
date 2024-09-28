@@ -38,7 +38,7 @@ update_git_and_venv() {
     {
         git_pull "[appstore/apps-tools] Couldn't pull, maybe local changes are present?"
         update_venv
-        ynh_exec_as_app venv/bin/pip install -r requirements.txt > /dev/null
+        venv/bin/pip install -r requirements.txt > /dev/null
     }
     popd > /dev/null
 
@@ -52,7 +52,7 @@ update_git_and_venv() {
     {
         git_pull "[appstore] Couldn't pull, maybe local changes are present?"
         update_venv
-        ynh_exec_as_app venv/bin/pip install -r requirements.txt > /dev/null
+        venv/bin/pip install -r requirements.txt > /dev/null
         pushd assets
             bash ./fetch_assets
         popd
@@ -77,3 +77,5 @@ main() {
         venv/bin/python3 fetch_level_history.py
     popd
 }
+
+main

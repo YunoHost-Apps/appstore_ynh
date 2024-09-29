@@ -77,7 +77,9 @@ main() {
     apps_tools/venv/bin/python3 apps_tools/list_builder.py -l apps -c apps_cache catalog/default
 
     pushd "appstore"
-        curl https://app.yunohost.org/default/v3/apps.json -so .cache/apps.json
+        # curl https://__DOMAIN__/default/v3/apps.json -so .cache/apps.json
+        cp ../catalog/default/v3/app.json .cache/apps.json
+
         venv/bin/python3 fetch_main_dashboard.py 2>&1 | grep -v 'Following Github server redirection'
         venv/bin/python3 fetch_level_history.py
     popd

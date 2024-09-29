@@ -1,5 +1,5 @@
 # Every 4 hours
-0 */4 * * * root __INSTALL_DIR__/update_catalog.sh
+0 */4 * * * __APP__ __INSTALL_DIR__/update_catalog.sh
 
 # Every day
-0 */4 * * * root __INSTALL_DIR__/update_catalog.sh
+0 */4 * * * __APP__ __INSTALL_DIR__/update_catalog.sh

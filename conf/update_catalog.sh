@@ -78,8 +78,7 @@ main() {
 
     pushd "appstore"
         # curl https://__DOMAIN__/default/v3/apps.json -so .cache/apps.json
-        ls -R ../catalog
-        cp ../catalog/default/v3/app.json .cache/apps.json
+        cp ../catalog/default/v3/apps.json .cache/apps.json
 
         venv/bin/python3 fetch_main_dashboard.py 2>&1 | grep -v 'Following Github server redirection'
         venv/bin/python3 fetch_level_history.py

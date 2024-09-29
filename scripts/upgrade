@@ -36,7 +36,7 @@ chown -R "$app:www-data" "$install_dir"
 #=================================================
 # INSTALL APP
 #=================================================
-ynh_script_progression --message="Upgrading app..." --weight=5
+ynh_script_progression "Upgrading app..." --weight=5
 
 pushd "$install_dir/apps_tools" > /dev/null
 {
@@ -51,11 +51,11 @@ ynh_exec_as_app "$install_dir/update_catalog.sh"
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading system configurations related to $app..."
+ynh_script_progression "Upgrading system configurations related to $app..."
 
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-ynh_add_systemd_config
+ynh_config_add_systemd
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
 
@@ -75,4 +75,4 @@ ynh_systemctl --service="$app" --action="start"
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed" --last
+ynh_script_progression "Upgrade of $app completed"

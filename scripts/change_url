@@ -22,13 +22,7 @@ ynh_systemctl --service="$app" --action="stop" --log_path="/var/log/$app/$app.lo
 #=================================================
 ynh_script_progression "Updating NGINX web server configuration..."
 
-ynh_change_url_nginx_config
-
-#=================================================
-# SPECIFIC MODIFICATIONS
-#=================================================
-# ...
-#=================================================
+ynh_config_change_url_nginx
 
 #=================================================
 # START SYSTEMD SERVICE

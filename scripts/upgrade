@@ -28,8 +28,8 @@ ynh_config_add --template="update_catalog.sh" --destination="$install_dir/update
 chmod +x "$install_dir/update_catalog.sh"
 
 # Fixture until we manage it properly
-ln -s "$install_dir/apps" "$install_dir/appstore/.cache/apps"
-ln -s "$install_dir/apps_cache" "$install_dir/appstore/.apps_cache"
+# ln -s "$install_dir/apps" "$install_dir/appstore/.cache/apps"
+# ln -s "$install_dir/apps_cache" "$install_dir/appstore/.apps_cache"
 
 chown -R "$app:www-data" "$install_dir"
 

@@ -47,6 +47,7 @@ popd > /dev/null
 
 ynh_script_progression "Downloading apps and appstore cache..."
 ynh_exec_as_app "$install_dir/update_catalog.sh"
+chown -R "$app:www-data" "$install_dir/appstore/assets"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS

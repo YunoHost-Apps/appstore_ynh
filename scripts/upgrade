@@ -31,6 +31,9 @@ chmod +x "$install_dir/update_catalog.sh"
 # ln -s "$install_dir/apps" "$install_dir/appstore/.cache/apps"
 # ln -s "$install_dir/apps_cache" "$install_dir/appstore/.apps_cache"
 
+# That way, we keep the www-data group when creating files
+setgid "$install_dir/assets"
+
 chown -R "$app:www-data" "$install_dir"
 
 #=================================================

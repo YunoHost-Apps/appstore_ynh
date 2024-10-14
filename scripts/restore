@@ -20,6 +20,9 @@ ynh_restore "$install_dir"
 ### ownership to all files such as after the ynh_setup_source step
 chown -R "$app:www-data" "$install_dir"
 
+# That way, we keep the www-data group when creating files
+setgid "$install_dir/assets"
+
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================

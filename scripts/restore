@@ -38,6 +38,8 @@ systemctl enable "$app-update.timer" --quiet
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
 
+ynh_restore "/etc/logrotate.d/$app"
+
 #=================================================
 # RESTORE VARIOUS FILES
 #=================================================

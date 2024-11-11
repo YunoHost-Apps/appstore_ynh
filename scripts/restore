@@ -30,16 +30,17 @@ ynh_script_progression "Restoring system configurations related to $app..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
+ynh_restore "/etc/systemd/system/$app-update.service"
+ynh_restore "/etc/systemd/system/$app-update.timer"
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
+systemctl enable "$app-update.timer" --quiet
 
-yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --log="/var/log/$app/$app.log"
 
 #=================================================
 # RESTORE VARIOUS FILES
 #=================================================
-
-ynh_restore "/etc/cron.d/$app"
 
 ynh_restore "/var/log/$app/"
 

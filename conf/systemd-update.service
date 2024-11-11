@@ -1,11 +1,3 @@
-
-Description=Update __APP__ once every hour
-
-
-__APP__ __INSTALL_DIR__/update_catalog.sh
-
-
-
 [Unit]
 Description=YunoHost update for Appstore
 After=network.target

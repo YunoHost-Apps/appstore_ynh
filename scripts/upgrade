@@ -16,6 +16,14 @@ ynh_script_progression "Stopping $app's systemd service..."
 ynh_systemctl --service="$app" --action="stop"
 
 #=================================================
+# Migrate
+#=================================================
+
+if [ -f "/etc/cron.d/$app" ]; then
+    ynh_safe_rm "/etc/cron.d/$app"
+fi
+
+#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."

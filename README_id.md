@@ -5,9 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # YunoHost Appstore untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/appstore.svg)](https://ci-apps.yunohost.org/ci/apps/appstore/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/appstore.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/appstore.maintain.svg)
+[![Tingkat integrasi](https://dash.yunohost.org/integration/yunohost_appstore.svg)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.maintain.svg)
 
-[![Pasang YunoHost Appstore dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=appstore)
+[![Pasang YunoHost Appstore dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=yunohost_appstore)
 
 *[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
@@ -25,19 +25,19 @@ Ini TIDAK boleh diedit dengan tangan.
 
 - Website aplikasi resmi: <https://apps.yunohost.org>
 - Depot kode aplikasi hulu: <https://github.com/yunohost/appstore>
-- Gudang YunoHost: <https://apps.yunohost.org/app/appstore>
-- Laporkan bug: <https://github.com/YunoHost-Apps/appstore_ynh/issues>
+- Gudang YunoHost: <https://apps.yunohost.org/app/yunohost_appstore>
+- Laporkan bug: <https://github.com/YunoHost-Apps/yunohost_appstore_ynh/issues>
 
 ## Info developer
 
-Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/appstore_ynh/tree/testing).
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing).
 
 Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/appstore_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing --debug
 atau
-sudo yunohost app upgrade appstore -u https://github.com/YunoHost-Apps/appstore_ynh/tree/testing --debug
+sudo yunohost app upgrade yunohost_appstore -u https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing --debug
 ```
 
 **Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>

@@ -5,9 +5,9 @@ EZ editatu eskuz.
 
 # YunoHost Appstore YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/appstore.svg)](https://ci-apps.yunohost.org/ci/apps/appstore/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/appstore.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/appstore.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/yunohost_appstore.svg)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.maintain.svg)
 
-[![Instalatu YunoHost Appstore YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=appstore)
+[![Instalatu YunoHost Appstore YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=yunohost_appstore)
 
 *[Irakurri README hau beste hizkuntzatan.](./ALL_README.md)*
 
@@ -25,19 +25,19 @@ EZ editatu eskuz.
 
 - Aplikazioaren webgune ofiziala: <https://apps.yunohost.org>
 - Jatorrizko aplikazioaren kode-gordailua: <https://github.com/yunohost/appstore>
-- YunoHost Denda: <https://apps.yunohost.org/app/appstore>
-- Eman errore baten berri: <https://github.com/YunoHost-Apps/appstore_ynh/issues>
+- YunoHost Denda: <https://apps.yunohost.org/app/yunohost_appstore>
+- Eman errore baten berri: <https://github.com/YunoHost-Apps/yunohost_appstore_ynh/issues>
 
 ## Garatzaileentzako informazioa
 
-Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/appstore_ynh/tree/testing).
+Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing).
 
 `testing` abarra probatzeko, ondorengoa egin:
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/appstore_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing --debug
 edo
-sudo yunohost app upgrade appstore -u https://github.com/YunoHost-Apps/appstore_ynh/tree/testing --debug
+sudo yunohost app upgrade yunohost_appstore -u https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing --debug
 ```
 
 **Informazio gehiago aplikazioaren paketatzeari buruz:** <https://yunohost.org/packaging_apps>

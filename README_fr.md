@@ -5,9 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # YunoHost Appstore pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/appstore.svg)](https://ci-apps.yunohost.org/ci/apps/appstore/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/appstore.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/appstore.maintain.svg)
+[![Niveau d’intégration](https://dash.yunohost.org/integration/yunohost_appstore.svg)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.maintain.svg)
 
-[![Installer YunoHost Appstore avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=appstore)
+[![Installer YunoHost Appstore avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=yunohost_appstore)
 
 *[Lire le README dans d'autres langues.](./ALL_README.md)*
 
@@ -25,19 +25,19 @@ Appstore de Yunohost
 
 - Site officiel de l’app : <https://apps.yunohost.org>
 - Dépôt de code officiel de l’app : <https://github.com/yunohost/appstore>
-- YunoHost Store : <https://apps.yunohost.org/app/appstore>
-- Signaler un bug : <https://github.com/YunoHost-Apps/appstore_ynh/issues>
+- YunoHost Store : <https://apps.yunohost.org/app/yunohost_appstore>
+- Signaler un bug : <https://github.com/YunoHost-Apps/yunohost_appstore_ynh/issues>
 
 ## Informations pour les développeurs
 
-Merci de faire vos pull request sur la [branche `testing`](https://github.com/YunoHost-Apps/appstore_ynh/tree/testing).
+Merci de faire vos pull request sur la [branche `testing`](https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing).
 
 Pour essayer la branche `testing`, procédez comme suit :
 
 ```bash
-sudo yunohost app install https://github.com/YunoHost-Apps/appstore_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade appstore -u https://github.com/YunoHost-Apps/appstore_ynh/tree/testing --debug
+sudo yunohost app upgrade yunohost_appstore -u https://github.com/YunoHost-Apps/yunohost_appstore_ynh/tree/testing --debug
 ```
 
 **Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>

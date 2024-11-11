@@ -17,7 +17,7 @@ Group=__APP__
 
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__INSTALL_DIR__/update_catalog.sh
-ExecStopPost=curl https://status.yunohost.org/api/push/c7btpT7MVa?msg=finished
+ExecStopPost=__INSTALL_DIR__/update_catalog_notify.sh
 
 StandardOutput=append:/var/log/__APP__/update_catalog.log
 StandardError=inherit

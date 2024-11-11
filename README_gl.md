@@ -18,7 +18,7 @@ NON debe editarse manualmente.
 
 
 
-**Versión proporcionada:** 1.0~ynh1
+**Versión proporcionada:** 1.1~ynh1
 
 **Demo:** <https://apps.yunohost.org>
 ## Documentación e recursos

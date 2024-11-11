@@ -18,7 +18,7 @@ Ini TIDAK boleh diedit dengan tangan.
 
 
 
-**Versi terkirim:** 1.0~ynh1
+**Versi terkirim:** 1.1~ynh1
 
 **Demo:** <https://apps.yunohost.org>
 ## Dokumentasi dan sumber daya

@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Yunohost appstore
 
-**Shipped version:** 1.0~ynh1
+**Shipped version:** 1.1~ynh1
 
 **Demo:** <https://apps.yunohost.org>
 ## Documentation and resources

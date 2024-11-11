@@ -18,7 +18,7 @@ Hij mag NIET handmatig aangepast worden.
 
 
 
-**Geleverde versie:** 1.0~ynh1
+**Geleverde versie:** 1.1~ynh1
 
 **Demo:** <https://apps.yunohost.org>
 ## Documentatie en bronnen

@@ -18,7 +18,7 @@ No se debe editar a mano.
 
 
 
-**Versión actual:** 1.0~ynh1
+**Versión actual:** 1.1~ynh1
 
 **Demo:** <https://apps.yunohost.org>
 ## Documentaciones y recursos

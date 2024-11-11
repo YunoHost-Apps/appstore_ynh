@@ -18,7 +18,7 @@ Il NE doit PAS être modifié à la main.
 
 Appstore de Yunohost
 
-**Version incluse :** 1.0~ynh1
+**Version incluse :** 1.1~ynh1
 
 **Démo :** <https://apps.yunohost.org>
 ## Documentations et ressources

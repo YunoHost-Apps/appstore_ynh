@@ -2,7 +2,7 @@
 
 packaging_format = 2
 
-id = "appstore"
+id = "yunohost_appstore"
 name = "YunoHost Appstore"
 
 description.en = "Yunohost appstore"

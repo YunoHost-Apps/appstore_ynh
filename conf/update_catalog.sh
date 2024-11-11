@@ -29,7 +29,7 @@ update_venv() {
 }
 
 reload_store() {
-    PIDFile=/run/gunicorn/appstore-pid
+    PIDFile=/run/gunicorn/__APP__-pid
     if [ -f "$PIDFile" ]; then
         kill -s HUP "$(cat "$PIDFile")"
     fi

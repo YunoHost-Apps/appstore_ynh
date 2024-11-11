@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 
-PIDFile=/run/gunicorn/appstore-pid
+PIDFile=/run/gunicorn/__APP__-pid
 WorkingDirectory=__INSTALL_DIR__/appstore
 ExecStart=__INSTALL_DIR__/appstore/venv/bin/gunicorn -c __INSTALL_DIR__/appstore/gunicorn.py app:app
 ExecReload=/bin/kill -s HUP $MAINPID

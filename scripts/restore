@@ -34,7 +34,7 @@ ynh_restore "/etc/systemd/system/$app-update.service"
 ynh_restore "/etc/systemd/system/$app-update.timer"
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
-systemctl enable "$app-update.timer" --quiet
+systemctl enable "$app-update.timer" --now --quiet
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
 

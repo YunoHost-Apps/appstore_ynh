@@ -74,7 +74,7 @@ ynh_config_add_nginx
 ynh_config_add --template="systemd-update.service" --destination="/etc/systemd/system/$app-update.service"
 ynh_config_add --template="systemd-update.timer" --destination="/etc/systemd/system/$app-update.timer"
 ynh_config_add_systemd
-systemctl enable "$app-update.timer" --quiet
+systemctl enable "$app-update.timer" --now --quiet
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
 

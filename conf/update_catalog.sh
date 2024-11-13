@@ -70,6 +70,7 @@ update_git_and_venv() {
 
 
 main() {
+    date
     update_git_and_venv
 
     apps_tools/venv/bin/python3 apps_tools/app_caches.py -l apps/ -c apps_cache/ -d -j20

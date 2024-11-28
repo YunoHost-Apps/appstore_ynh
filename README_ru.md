@@ -5,7 +5,9 @@
 
 # YunoHost Appstore для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/yunohost_appstore.svg)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/yunohost_appstore)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/)
+![Состояние работы](https://apps.yunohost.org/badge/state/yunohost_appstore)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/yunohost_appstore)
 
 [![Установите YunoHost Appstore с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=yunohost_appstore)
 

@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # YunoHost Appstore para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/yunohost_appstore.svg)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/yunohost_appstore)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/yunohost_appstore)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/yunohost_appstore)
 
 [![Instalar YunoHost Appstore con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=yunohost_appstore)
 

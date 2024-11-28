@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # YunoHost Appstore YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/yunohost_appstore.svg)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/yunohost_appstore.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/yunohost_appstore)](https://ci-apps.yunohost.org/ci/apps/yunohost_appstore/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/yunohost_appstore)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/yunohost_appstore)
 
 [![Instalatu YunoHost Appstore YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=yunohost_appstore)
 
